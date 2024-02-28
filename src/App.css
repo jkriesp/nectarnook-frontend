@@ -1,13 +1,14 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
 }
 
-.logo {
-  height: 6em;
+.logo img {
+  height: 200px;
   padding: 1.5em;
+  background-color: gold;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -18,25 +19,37 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-size: 3em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
 }
 
-.card {
-  padding: 2em;
+.productItem {
+  padding: 1em;
+  border: 1px solid black;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 250px;
+  height: 350px;
+  will-change: filter;
+  transition: filter 300ms;
+  cursor: pointer;
 }
-
-.read-the-docs {
-  color: #888;
+.productItem:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.productItem.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
