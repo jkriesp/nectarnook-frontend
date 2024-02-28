@@ -33,23 +33,51 @@ h1 {
 }
 
 .productItem {
-  padding: 1em;
-  border: 1px solid black;
+  position: relative;
+  padding: 0; /* Adjusted */
+  border-radius: 20px;
   margin: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 250px;
-  height: 350px;
-  will-change: filter;
-  transition: filter 300ms;
+  width: 350px;
+  height: 450px;
   cursor: pointer;
+  background-size: cover; /* Ensure the image covers the whole div */
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end; /* Align content to bottom */
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 9px 7px 106px 12px rgba(232, 217, 0, 0.06);
+  -webkit-box-shadow: 9px 7px 106px 12px rgba(232, 217, 0, 0.06);
+  -moz-box-shadow: 9px 7px 106px 12px rgba(232, 217, 0, 0.06);
+}
+
+.productItem::before {
+  border-radius: 0 0 20px 20px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35%; /* Adjust based on desired effect */
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, transparent 100%); */
+  background-color: rgba(58, 53, 50, 0.37); /* Semi-transparent background */
+  backdrop-filter: blur(4px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(4px); /* For Safari */
+  z-index: 1;
 }
 .productItem:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #f0cc03aa);
+  transition: 1000ms;
 }
 .productItem.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #f0cc03aa);
+  transition: 1000ms;
+}
+
+.productInfo {
+  position: relative;
+  z-index: 2; /* Ensure text appears above the pseudo-element */
+  color: white; /* Adjust text color for better visibility */
+  padding: 1em;
 }
