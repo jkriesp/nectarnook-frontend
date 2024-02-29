@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <Banner><h1>👋 Welcome to NectarNook</h1></Banner>
+      <Banner><h1>Transcend the ordinary</h1></Banner>
       <ProductsList />
     </>
   );

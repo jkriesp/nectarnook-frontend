@@ -4,7 +4,7 @@ const banner = ({ children }: { children: React.ReactNode; }) => {
       <div className="logo">
         <img src="src/assets/NectarNook.svg" alt="Logo of NectarNook" />
       </div>
-      <div>
+      <div className="bannerText">
         {children}
       </div>
     </div>

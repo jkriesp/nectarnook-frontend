@@ -90,7 +90,8 @@ select {
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
   line-height: 1.5;
   font-weight: 400;
 
@@ -102,4 +103,12 @@ select {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  color: white; /* Adjust text color as needed */
+  min-height: 100vh; /* Ensure it covers the whole page */
+  display: flex;
+  flex-direction: column;
 }

@@ -1,4 +1,5 @@
 import { Product } from "../util/interface";
+import BuyButton from "./BuyButton";
 
 const ProductItem = ({ product }: { product: Product; }) => {
   return (
@@ -6,9 +7,10 @@ const ProductItem = ({ product }: { product: Product; }) => {
       {/* <div className="productImage"><img src={`src/assets/nectars/${product.name}.webp`} alt={product.name} /></div> */}
       <div className="productInfo">
         <h2>{product.name}</h2>
-        <p>{product.description}</p>
-        <p>Price: {product.price}</p>
+        <p className="productDescription">{product.description}</p>
+        <p><b>Price: {product.price}</b></p>
         <p>In Stock: {product.in_stock ? 'Yes' : 'No'}</p>
+        <BuyButton product={product} />
       </div>
     </div>
   );
